@@ -1,0 +1,278 @@
+@font-face {
+  font-family: "iconos";
+  src: url("../src/assets/fonts/icomoon.eot");
+  src: url("../src/assets/fonts/icomoon.eot") format("embedded-opentype"),
+    url("../src/assets/fonts/icomoon.ttf") format("truetype"),
+    url("../src/assets/fonts/icomoon.woff") format("woff"),
+    url("../src/assets/fonts/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.front,
+ul,
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-right: 50px;
+}
+
+.front {
+  border: 5px palegoldenrod solid;
+  background-color: beige;
+}
+
+.foot {
+  background-color: beige;
+  text-align: center;
+}
+
+.taxico-red {
+  color: red;
+}
+
+.Fee {
+  display: flex;
+  flex-direction: column;
+}
+
+input select h3 {
+  margin-bottom: 50px;
+}
+
+.frame {
+  width: fit-content;
+  padding: 100px;
+  border: 2px black solid;
+  margin-left: 85vh;
+  margin-bottom: 20px;
+  background-color: palegoldenrod;
+}
+.user-icon::after {
+  font-family: "iconos";
+  content: '\e971';
+  font-size: 200px;
+}
+
+.boxouter-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 99vh;
+  border: 5px yellow solid;
+}
+
+.box-login{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 5px black solid;
+  width: fit-content;
+  padding: 100px;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.switcher{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.square{
+  border: 3px black solid;
+  width: fit-content;
+  height: fit-content;
+  padding: 15px;
+  border-radius: 15px;
+  margin-right: 25px;
+  background-color: beige;
+  transition: background-color 1s ease;
+}
+.square:hover{
+  background-color: red;
+  font-size: 30px;
+}
+.search{
+  display: flex;
+  justify-content: center;
+}
+
+.search-icon::before{
+  font-family: 'iconos';
+  font-size: 45px;
+  content: '\e986';
+  z-index: 1000;
+  position: absolute;
+  left: 83vh;
+}
+.box-card{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+}
+.box-card:hover{
+  background-color: beige;
+}
+.part{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-right: 40px;
+}
+.trashbin-icon::before{
+  font-family: 'iconos';
+  font-size: 30px;
+  content: '\e9ac';
+}
+.pencil-icon::before{
+  font-family: 'iconos';
+  font-size: 30px;
+  content: '\e905';
+}
+.searched-Drivers{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5vw;
+  margin-top: 5vh;
+}
+.searched-Fees{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 11vw;
+  margin-top: 5vh;
+}
+.return-icon::before{
+  font-family: 'iconos';
+  content: '\ea13';
+  font-size: 30px;
+}
+.Driver {
+  display: flex;
+  flex-direction: column;
+}
+
+.frame2 {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 80px;
+  border: 2px black solid;
+  margin-left: 25vw;
+  margin-bottom: 20px;
+  background-color: palegoldenrod;
+}
+
+.Repair {
+  display: flex;
+  flex-direction: column;
+}
+.frame3 {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 80px;
+  border: 2px black solid;
+  margin-left: 40vw;
+  margin-bottom: 20px;
+  background-color: palegoldenrod;
+}
+.searched-Repairs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15vw;
+  margin-top: 5vh;
+}
+
+.Popup-overlay{
+  position: fixed;
+  bottom: 5vh;
+  right: 2vw;
+}
+
+.Popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.Car {
+  display: flex;
+  flex-direction: column;
+}
+.frame4 {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 80px;
+  border: 2px black solid;
+  margin-left: 40vw;
+  margin-bottom: 50px;
+  background-color: palegoldenrod;
+}
+
+.searched-Cars{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 23vw;
+  margin-top: 5vh;
+}
+.Control-Panel{
+display:flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.cuadro{
+  margin-right: 50px;
+  text-align: center;
+}
