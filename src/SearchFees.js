@@ -9,9 +9,10 @@ function SearchFees({ endpoint, user, setDesautorizacion, fees }) {
     "Vehiculo",
     "Actualizado en",
     "Actualizado por",
-    "Corresponde a"
+    "Corresponde a",
+    "Descanso"
   ];
-  const types = ["text", "text", "text","date"];
+  const types = ["text", "text", "text","date","text"];
 
   function datetimeToDate(date) {
     let newDate = null;
@@ -34,6 +35,7 @@ function SearchFees({ endpoint, user, setDesautorizacion, fees }) {
             datetimeToDate(fee.updated_at),
             fee.updated_by,
             datetimeToDate(fee.fee_date),
+            fee.rest? "Sí":"No",
           ];
           return (
             <Card

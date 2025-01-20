@@ -53,14 +53,15 @@ input select h3 {
   margin-left: 85vh;
   margin-bottom: 20px;
   background-color: palegoldenrod;
+  margin-top: 50px;
 }
 .user-icon::after {
   font-family: "iconos";
-  content: '\e971';
+  content: "\e971";
   font-size: 200px;
 }
 
-.boxouter-login{
+.boxouter-login {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,7 +69,7 @@ input select h3 {
   border: 5px yellow solid;
 }
 
-.box-login{
+.box-login {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -109,13 +110,14 @@ input select h3 {
   cursor: pointer;
 }
 
-.switcher{
+.switcher {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-bottom: 100px;
+  margin-top: 50px;
 }
-.square{
+.square {
   border: 3px black solid;
   width: fit-content;
   height: fit-content;
@@ -125,67 +127,67 @@ input select h3 {
   background-color: beige;
   transition: background-color 1s ease;
 }
-.square:hover{
+.square:hover {
   background-color: red;
   font-size: 30px;
 }
-.search{
+.search {
   display: flex;
   justify-content: center;
 }
 
-.search-icon::before{
-  font-family: 'iconos';
+.search-icon::before {
+  font-family: "iconos";
   font-size: 45px;
-  content: '\e986';
+  content: "\e986";
   z-index: 1000;
   position: absolute;
   left: 83vh;
 }
-.box-card{
+.box-card {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 200px;
   height: 100px;
 }
-.box-card:hover{
+.box-card:hover {
   background-color: beige;
 }
-.part{
+.part {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding-right: 40px;
 }
-.trashbin-icon::before{
-  font-family: 'iconos';
+.trashbin-icon::before {
+  font-family: "iconos";
   font-size: 30px;
-  content: '\e9ac';
+  content: "\e9ac";
 }
-.pencil-icon::before{
-  font-family: 'iconos';
+.pencil-icon::before {
+  font-family: "iconos";
   font-size: 30px;
-  content: '\e905';
+  content: "\e905";
 }
-.searched-Drivers{
+.searched-Drivers {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 5vw;
   margin-top: 5vh;
 }
-.searched-Fees{
+.searched-Fees {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 11vw;
+  margin-left: 8vw;
   margin-top: 5vh;
 }
-.return-icon::before{
-  font-family: 'iconos';
-  content: '\ea13';
+.return-icon::before {
+  font-family: "iconos";
+  content: "\ea13";
   font-size: 30px;
 }
 .Driver {
@@ -202,6 +204,7 @@ input select h3 {
   margin-left: 25vw;
   margin-bottom: 20px;
   background-color: palegoldenrod;
+  margin-top: 50px;
 }
 
 .Repair {
@@ -217,8 +220,9 @@ input select h3 {
   margin-left: 40vw;
   margin-bottom: 20px;
   background-color: palegoldenrod;
+  margin-top: 50px;
 }
-.searched-Repairs{
+.searched-Repairs {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -226,7 +230,7 @@ input select h3 {
   margin-top: 5vh;
 }
 
-.Popup-overlay{
+.Popup-overlay {
   position: fixed;
   bottom: 5vh;
   right: 2vw;
@@ -257,22 +261,134 @@ input select h3 {
   margin-left: 40vw;
   margin-bottom: 50px;
   background-color: palegoldenrod;
+  margin-top: 100px;
 }
 
-.searched-Cars{
+.searched-Cars {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 23vw;
   margin-top: 5vh;
 }
-.Control-Panel{
-display:flex;
-flex-direction: row;
-justify-content: center;
+.Control-Panel-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.cuadro{
+.Control-Panel-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.cuadro {
+  display: flex;
+  flex-direction: row;
   margin-right: 50px;
+  padding: 10px;
+  border: 3px black double;
+}
+.Right-Arrow::before {
+  position: absolute;
+  display: flex;
+  top: 10vh;
+  right: 5vw;
+  font-family: "iconos";
+  content: "\ea3c";
+  font-size: 40px;
+  height: 70vh;
+  align-items: center;
+  z-index: 2000;
+}
+
+.Left-Arrow::before {
+  position: absolute;
+  display: flex;
+  top: 10vh;
+  left: 5vw;
+  font-family: "iconos";
+  content: "\ea40";
+  font-size: 40px;
+  z-index: 1000;
+  height: 70vh;
+  align-items: center;
+}
+
+.image {
+  top: -100vh;
+  width: 99.1vw;
+  height: 70vh;
+}
+.driverControl-Panel{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.Day{
+  position: relative;
+  padding: 10px;
+  width: 50px;
   text-align: center;
+  font-size: 50px;
+  border: 3px black solid;
+}
+.dayweek{
+  font-size: 10px;
+}
+
+.box-days{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.Conventions{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: 50px;
+  left: 28vw;
+  margin-bottom: 220px;
+}
+
+.Up-Arrow::before{
+  position: absolute;
+  top: 25vh;
+  left: 50vw;
+  font-family: 'iconos';
+  content: '\ea3a';
+  font-size: 50px;
+}
+
+.Down-Arrow::before{
+  position: absolute;
+  top: 55vh;
+  left: 50vw;
+  font-family: 'iconos';
+  content: '\ea3e';
+  font-size: 50px;
+}
+
+.license{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top:40vh;
+  left:68vw;
+  border:3px black solid;
+  width: fit-content;
+  padding: 30px;
+}
+.driver{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top:60vh;
+  left:68vw;
+  border:3px black solid;
+  width: fit-content;
+  padding: 10px 40px;
 }

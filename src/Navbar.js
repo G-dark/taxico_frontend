@@ -11,7 +11,7 @@ export const Navbar = ({ setOption }) => {
 
   return (
     <>
-      <nav style={{ marginBottom: "10vh" }}>
+      <nav>
         <div className="front">
           <h2
             style={{ position: "absolute", top: "1px", left: "20px" }}
