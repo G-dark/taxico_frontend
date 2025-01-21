@@ -53,6 +53,7 @@ function FeePanel({ endpoint, user, setDesautorizacion }) {
     fetch(endpoint + "/Driver", {
       credentials: "include",
       headers: { "Content-Type": "application/json" },
+      mode: 'cors',
     })
       .then((response) => {
         if (!response.ok) {
@@ -76,6 +77,7 @@ function FeePanel({ endpoint, user, setDesautorizacion }) {
     fetch(endpoint + "/Car", {
       credentials: "include",
       headers: { "Content-Type": "application/json" },
+      mode: 'cors',
     })
       .then((response) => {
         if (!response.ok) {
@@ -122,6 +124,7 @@ function FeePanel({ endpoint, user, setDesautorizacion }) {
       body: JSON.stringify(bodyy),
       credentials: "include",
       headers: { "Content-Type": "application/json" },
+      mode: 'cors',
     })
       .then((response) => {
         if (!response.ok) {
@@ -156,6 +159,7 @@ function FeePanel({ endpoint, user, setDesautorizacion }) {
       fetch(endpoint + "/Fee", {
         credentials: "include",
         headers: { "Content-Type": "application/json" },
+        mode: 'cors',
       })
         .then((response) => {
           if (!response.ok) {
@@ -178,6 +182,7 @@ function FeePanel({ endpoint, user, setDesautorizacion }) {
       fetch(endpoint + "/Fee", {
         credentials: "include",
         headers: { "Content-Type": "application/json" },
+        mode: 'cors',
       })
         .then((response) => {
           if (!response.ok) {

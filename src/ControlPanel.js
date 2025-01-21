@@ -19,6 +19,7 @@ function ControlPanel({ endpoint, setDesautorizacion, user }) {
     fetch(endpoint + "/Driver", {
       credentials: "include",
       headers: { "Content-Type": "application/json" },
+      mode: 'cors',
     })
       .then((response) => {
         if (!response.ok) {
@@ -45,6 +46,7 @@ function ControlPanel({ endpoint, setDesautorizacion, user }) {
     fetch(endpoint + "/Fee", {
       credentials: "include",
       headers: { "Content-Type": "application/json" },
+      mode: 'cors',
     })
       .then((response) => {
         if (!response.ok) {
@@ -67,6 +69,7 @@ function ControlPanel({ endpoint, setDesautorizacion, user }) {
     fetch(endpoint + "/CarFee", {
       credentials: "include",
       headers: { "Content-Type": "application/json" },
+      mode: 'cors',
     })
       .then((response) => {
         if (!response.ok) {

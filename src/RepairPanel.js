@@ -52,6 +52,7 @@ function RepairPanel({ endpoint, user, setDesautorizacion }) {
     fetch(endpoint + "/Car", {
       credentials: "include",
       headers: { "Content-Type": "application/json" },
+      mode: 'cors',
     })
       .then((response) => {
         if (!response.ok) {
@@ -94,6 +95,7 @@ function RepairPanel({ endpoint, user, setDesautorizacion }) {
       body: JSON.stringify(bodyy),
       credentials: "include",
       headers: { "Content-Type": "application/json" },
+      mode: 'cors',
     })
       .then((response) => {
         if (!response.ok) {
@@ -128,6 +130,7 @@ function RepairPanel({ endpoint, user, setDesautorizacion }) {
       fetch(endpoint + "/Repair", {
         credentials: "include",
         headers: { "Content-Type": "application/json" },
+        mode: 'cors',
       })
         .then((response) => {
           if (!response.ok) {
@@ -150,6 +153,7 @@ function RepairPanel({ endpoint, user, setDesautorizacion }) {
       fetch(endpoint + "/Repair", {
         credentials: "include",
         headers: { "Content-Type": "application/json" },
+        mode: 'cors',
       })
         .then((response) => {
           if (!response.ok) {

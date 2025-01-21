@@ -14,6 +14,7 @@ function Login({ endpoint, setOption, setUser }) {
         method: "POST",
         body: JSON.stringify(bodyy),
         credentials: 'include',
+        mode: 'cors',
         headers: { "Content-Type": "application/json" },
       });
       log = await response.json()

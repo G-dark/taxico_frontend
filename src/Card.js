@@ -144,6 +144,7 @@ function Card({
       body: JSON.stringify(bodyy),
       credentials: "include",
       headers: { "Content-Type": "application/json" },
+      mode: 'cors',
     })
       .then((response) => {
         if (!response.ok) {
@@ -167,6 +168,7 @@ function Card({
       method: "DELETE",
       credentials: "include",
       headers: { "Content-Type": "application/json" },
+      mode: 'cors',
     })
       .then((response) => {
         if (!response.ok) {

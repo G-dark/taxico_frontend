@@ -50,6 +50,7 @@ function ControlDriver({ endpoint, driver, setDesautorizacion, user, setOption }
     fetch(endpoint + "/Driver/" + driver, {
       credentials: "include",
       headers: { "Content-Type": "application/json" },
+      mode: 'cors',
     })
       .then((response) => {
         if (!response.ok) {
@@ -75,6 +76,7 @@ function ControlDriver({ endpoint, driver, setDesautorizacion, user, setOption }
     fetch(endpoint + "/Fee", {
       credentials: "include",
       headers: { "Content-Type": "application/json" },
+      mode: 'cors',
     })
       .then((response) => {
         if (!response.ok) {
