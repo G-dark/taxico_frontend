@@ -17,7 +17,7 @@ function Carrusel({ image, image2, image3 }) {
       setImageSelected(image3);
     }
     
-  },[id]);
+  },[id,image,image2,image3]);
   return (
     <>
       <div>
