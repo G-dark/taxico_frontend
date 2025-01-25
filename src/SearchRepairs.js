@@ -12,14 +12,7 @@ function SearchRepairs({ endpoint, user, setDesautorizacion, repairs }) {
   ];
   const types = ["text", "text", "text","text", "text", "text","text"];
 
-  function datetimeToDate(date) {
-    let newDate = null;
-    if (date !== null) {
-      const date2 = (date.replace("T", " ")).replace("Z", "");
-      newDate = date2;
-    }
-    return newDate;
-  }
+ 
   return (
     <>
       {repairs.length > 0 ? (

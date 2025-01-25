@@ -11,14 +11,7 @@ function SearchCars({ endpoint, user, setDesautorizacion, cars }) {
   ];
   const types = ["text", "text", "text","text", "text", "text"];
 
-  function datetimeToDate(date) {
-    let newDate = null;
-    if (date !== null) {
-      const date2 = (date.replace("T", " ")).replace("Z", "");
-      newDate = date2;
-    }
-    return newDate;
-  }
+
   return (
     <>
       {cars.length > 0 ? (
