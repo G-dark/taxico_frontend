@@ -1,5 +1,5 @@
 import Card from "./Card";
-
+import moment from "moment-timezone";
 function SearchRepairs({ endpoint, user, setDesautorizacion, repairs }) {
   const repairLabels = [
     "Concepto",
@@ -28,9 +28,9 @@ function SearchRepairs({ endpoint, user, setDesautorizacion, repairs }) {
             repair.concept,
             repair.cost,
             repair.car,
-            datetimeToDate(repair.repair_date),
+            moment(repair.repair_date).tz("America/Bogota").format("YYYY-MM-DD HH:mm:ss"),
             repair.registered_by,
-            datetimeToDate(repair.updated_at),
+            moment(repair.updated_at).tz("America/Bogota").format("YYYY-MM-DD HH:mm:ss"),
             repair.updated_by,
           ];
           return (

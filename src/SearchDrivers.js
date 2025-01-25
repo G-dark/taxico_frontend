@@ -1,4 +1,5 @@
 import Card from "./Card";
+import moment from "moment-timezone";
 
 function SearchDrivers({ endpoint, user, setDesautorizacion, drivers }) {
   const driverLabels = [
@@ -15,14 +16,7 @@ function SearchDrivers({ endpoint, user, setDesautorizacion, drivers }) {
   ];
   const types = ["text", "text", "text","text", "text", "text","text"];
 
-  function datetimeToDate(date) {
-    let newDate = null;
-    if (date !== null) {
-      const date2 = (date.replace("T", " ")).replace("Z", "");
-      newDate = date2;
-    }
-    return newDate;
-  }
+
   return (
     <>
       {drivers.length > 0 ? (
@@ -36,7 +30,7 @@ function SearchDrivers({ endpoint, user, setDesautorizacion, drivers }) {
             driver.car,
             driver._status ? "Activo":"Inactivo",
             driver.registered_by,
-            datetimeToDate(driver.registered_at),
+            moment( driver.registered_at).tz("America/Bogota").format("YYYY-MM-DD HH:mm:ss"),
             driver.deficit,
           ];
           return (

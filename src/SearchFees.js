@@ -1,5 +1,5 @@
 import Card from "./Card";
-
+import moment from "moment-timezone";
 function SearchFees({ endpoint, user, setDesautorizacion, fees }) {
   const feeLabels = [
     "Entregado por",
@@ -14,14 +14,6 @@ function SearchFees({ endpoint, user, setDesautorizacion, fees }) {
   ];
   const types = ["text", "text", "text","date","text"];
 
-  function datetimeToDate(date) {
-    let newDate = null;
-    if (date !== null) {
-      const date2 = (date.replace("T", " ")).replace("Z", "");
-      newDate = date2;
-    }
-    return newDate;
-  }
   return (
     <>
       {fees.length > 0 ? (
@@ -29,12 +21,12 @@ function SearchFees({ endpoint, user, setDesautorizacion, fees }) {
           const feeValues = [
             fee.delivered_by,
             fee.amount,
-            datetimeToDate(fee.delivery_date),
+            moment(fee.delivery_date).tz("America/Bogota").format("YYYY-MM-DD HH:mm:ss"),
             fee.received_by,
             fee.car,
-            datetimeToDate(fee.updated_at),
+            moment(fee.update_at).tz("America/Bogota").format("YYYY-MM-DD HH:mm:ss"),
             fee.updated_by,
-            datetimeToDate(fee.fee_date),
+            moment(fee.fee_date).tz("America/Bogota").format("YYYY-MM-DD HH:mm:ss"),
             fee.rest? "Sí":"No",
           ];
           return (

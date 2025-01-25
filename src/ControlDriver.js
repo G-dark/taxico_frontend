@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import moment from "moment";
+import moment2 from "moment-timezone";
 function ControlDriver({ endpoint, driver, setDesautorizacion, user, setOption }) {
   const [fees, setFees] = useState([]);
   const [today, setToday] = useState("");
@@ -40,7 +41,7 @@ function ControlDriver({ endpoint, driver, setDesautorizacion, user, setOption }
       setDays([]);
       setMonth(date[0].getMonth());
       for (let index = 1; index <= numberOfDays[date[0].getMonth()]; index++) {
-        
+
         setDays((t) => [...t, year + "/" + Number(id + 1) + "/" + index]);
       }
     }
@@ -178,8 +179,7 @@ function ControlDriver({ endpoint, driver, setDesautorizacion, user, setOption }
     }
 
     if (driverS[0] !== undefined) {
-      const part = driverS[0].registered_at.split("T");
-      const registrado = moment(part[0]);
+      const registrado = moment2(driverS[0].registered_at).tz("America/Bogota").format("YYYY-MM-DD");
 
       if (dia.diff(registrado, "days") === 0) {
         style = { backgroundColor: "yellowgreen" };

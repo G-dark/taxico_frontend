@@ -319,7 +319,7 @@ function DriverPanel({ endpoint, user, setDesautorizacion }) {
                 backgroundColor: "white",
               }}
             />
-           
+
           </div>
           <div style={filling} className="searched-Drivers">
             <SearchDrivers

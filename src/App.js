@@ -11,7 +11,7 @@ import CarPanel from "./CarPanel";
 import ControlPanel from "./ControlPanel";
 
 function App() {
-  //http://localhost:3010/API  http://taxico.up.railway.app/API
+ 
   const [option, setOption] = useState("login");
   const [endpoint] = useState("https://taxico.up.railway.app/API");
   const [user, setUser] = useState("");

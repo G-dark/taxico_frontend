@@ -1,5 +1,5 @@
 import Card from "./Card";
-
+import moment from "moment-timezone";
 function SearchCars({ endpoint, user, setDesautorizacion, cars }) {
   const carLabels = [
     "Placa",
@@ -29,7 +29,7 @@ function SearchCars({ endpoint, user, setDesautorizacion, cars }) {
             car._status ? "Activo":"Inactivo",
             car.taxidriver,
             car.updated_by,
-            datetimeToDate(car.updated_at)
+            moment(car.updated_at).tz("America/Bogota").format("YYYY-MM-DD HH:mm:ss")
           ];
           return (
             <Card
